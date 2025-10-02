@@ -157,7 +157,7 @@ optional = true
 [dependencies.bson3]
 version = "3.0.0"
 git = "https://github.com/dvn8weil/bson-rust"
-branch = "main"
+branch = "3.0.x"
 package = "bson"
 optional = true
 features = ["serde"]
