@@ -29,8 +29,8 @@ exclude = [
 ]
 
 [features]
-default = ["rustls-tls", "dns-resolver"]
-bson = ["dep:bson3", "mongocrypt/bson-3"]
+default = ["rustls-tls", "dns-resolver", "bson"]
+bson = ["dep:bson", "mongocrypt/bson-3"]
 sync = []
 rustls-tls = ["dep:rustls", "dep:tokio-rustls"]
 openssl-tls = ["dep:openssl", "dep:openssl-probe", "dep:tokio-openssl"]
@@ -67,7 +67,7 @@ in-use-encryption-unstable = ["in-use-encryption"]
 # Enables support for emitting tracing events.
 # The tracing API is unstable and may have backwards-incompatible changes in minor version updates.
 # TODO: pending https://github.com/tokio-rs/tracing/issues/2036 stop depending directly on log.
-tracing-unstable = ["dep:tracing", "dep:log", "bson3?/serde_json-1"]
+tracing-unstable = ["dep:tracing", "dep:log", "bson?/serde_json-1"]
 
 [dependencies]
 async-trait = "0.1.42"
@@ -150,6 +150,7 @@ git = "https://github.com/mongodb/bson-rust"
 branch = "3.0.x"
 package = "bson"
 features = ["serde"]
+optional = true
 
 [dependencies.mongocrypt]
 version = "0.3.1"
