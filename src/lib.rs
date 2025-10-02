@@ -56,14 +56,7 @@ mod test;
 mod trace;
 pub(crate) mod tracking_arc;
 
-#[cfg(not(any(feature = "bson-2", feature = "bson-3")))]
-compile_error!("One of the bson-2 and bson-3 features must be enabled.");
-
-#[cfg(all(feature = "bson-2", not(feature = "bson-3")))]
-pub use bson2 as bson;
-
-#[cfg(feature = "bson-3")]
-pub use bson3 as bson;
+pub use bson;
 
 #[cfg(feature = "in-use-encryption")]
 pub use crate::client::csfle::client_encryption;
@@ -86,8 +79,4 @@ pub use search_index::{SearchIndexModel, SearchIndexType};
 /// A boxed future.
 pub type BoxFuture<'a, T> = std::pin::Pin<Box<dyn std::future::Future<Output = T> + Send + 'a>>;
 
-#[cfg(not(feature = "compat-3-3-0"))]
-compile_error!(
-    "The feature 'compat-3-3-0' must be enabled to ensure forward compatibility with future \
-     versions of this crate."
-);
+

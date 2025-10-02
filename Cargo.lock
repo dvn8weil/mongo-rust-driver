@@ -558,7 +558,7 @@ dependencies = [
 [[package]]
 name = "bson"
 version = "2.15.0"
-source = "git+https://github.com/dvn8weil/bson-rust?branch=2.15.x#1ee7cd6c48a1df8df2917e8930e8bf6f53fab8f1"
+source = "git+https://github.com/mongodb/bson-rust?branch=2.15.x#f6f163095b5159ce175424b0e02f9bd7acfaddf2"
 dependencies = [
  "ahash",
  "base64 0.22.1",
@@ -580,7 +580,7 @@ dependencies = [
 [[package]]
 name = "bson"
 version = "3.0.0"
-source = "git+https://github.com/dvn8weil/bson-rust?branch=3.0.x#18f7032d9bab63d9da416086a6e7fda6ea3f93f6"
+source = "git+https://github.com/mongodb/bson-rust?branch=3.0.x#69f82fb1c99fa8aa3be3dee22e1834efb7428c66"
 dependencies = [
  "ahash",
  "base64 0.22.1",
@@ -604,7 +604,7 @@ dependencies = [
 [[package]]
 name = "bson"
 version = "3.0.0"
-source = "git+https://github.com/dvn8weil/bson-rust?branch=main#830984c2f3a5fd6464164110e24727af26b09442"
+source = "git+https://github.com/mongodb/bson-rust?branch=main#830984c2f3a5fd6464164110e24727af26b09442"
 dependencies = [
  "ahash",
  "base64 0.22.1",
@@ -2045,10 +2045,10 @@ dependencies = [
 [[package]]
 name = "mongocrypt"
 version = "0.3.1"
-source = "git+https://github.com/dvn8weil/libmongocrypt-rust.git?branch=main#d5fdd4ab7a0771a6c5d98b438f40a230c836b80d"
+source = "git+https://github.com/mongodb/libmongocrypt-rust.git?branch=main#132757496c04007b0482f9014dbc616553f1f916"
 dependencies = [
  "bson 2.15.0",
- "bson 3.0.0 (git+https://github.com/dvn8weil/bson-rust?branch=main)",
+ "bson 3.0.0 (git+https://github.com/mongodb/bson-rust?branch=main)",
  "mongocrypt-sys",
  "once_cell",
  "serde",
@@ -2057,7 +2057,7 @@ dependencies = [
 [[package]]
 name = "mongocrypt-sys"
 version = "0.1.4+1.12.0"
-source = "git+https://github.com/dvn8weil/libmongocrypt-rust.git?branch=main#d5fdd4ab7a0771a6c5d98b438f40a230c836b80d"
+source = "git+https://github.com/mongodb/libmongocrypt-rust.git?branch=main#132757496c04007b0482f9014dbc616553f1f916"
 
 [[package]]
 name = "mongodb"
@@ -2074,7 +2074,7 @@ dependencies = [
  "base64 0.13.1",
  "bitflags 1.3.2",
  "bson 2.15.0",
- "bson 3.0.0 (git+https://github.com/dvn8weil/bson-rust?branch=3.0.x)",
+ "bson 3.0.0 (git+https://github.com/mongodb/bson-rust?branch=3.0.x)",
  "chrono",
  "cross-krb5",
  "ctrlc",
@@ -3040,6 +3040,7 @@ version = "1.0.145"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "402a6f66d8c709116cf22f558eab210f5a50187f702eb4d7e5ef38d9a7f1c79c"
 dependencies = [
+ "indexmap 2.11.4",
  "itoa",
  "memchr",
  "ryu",

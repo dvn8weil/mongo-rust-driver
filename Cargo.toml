@@ -29,11 +29,8 @@ exclude = [
 ]
 
 [features]
-default = ["compat-3-0-0", "rustls-tls", "dns-resolver"]
-compat-3-0-0 = ["compat-3-3-0", "bson-2"]
-compat-3-3-0 = []
-bson-2 = ["dep:bson2", "mongocrypt/bson-2"]
-bson-3 = ["dep:bson3", "mongocrypt/bson-3"]
+default = ["rustls-tls", "dns-resolver"]
+bson = ["dep:bson3", "mongocrypt/bson-3"]
 sync = []
 rustls-tls = ["dep:rustls", "dep:tokio-rustls"]
 openssl-tls = ["dep:openssl", "dep:openssl-probe", "dep:tokio-openssl"]
@@ -147,24 +144,16 @@ version = "1.3"
 optional = true
 default-features = false
 
-[dependencies.bson2]
-version = "2.15.0"
-git = "https://github.com/dvn8weil/bson-rust"
-branch = "2.15.x"
-package = "bson"
-optional = true
-
-[dependencies.bson3]
+[dependencies.bson]
 version = "3.0.0"
-git = "https://github.com/dvn8weil/bson-rust"
+git = "https://github.com/mongodb/bson-rust"
 branch = "3.0.x"
 package = "bson"
-optional = true
 features = ["serde"]
 
 [dependencies.mongocrypt]
 version = "0.3.1"
-git = "https://github.com/dvn8weil/libmongocrypt-rust.git"
+git = "https://github.com/mongodb/libmongocrypt-rust.git"
 branch = "main"
 default-features = false
 optional = true
@@ -233,8 +222,8 @@ reqwest = { version = "0.12.2", features = ["rustls-tls"] }
 serde-hex = "0.1.0"
 serde_path_to_error = "0.1"
 
-[dev-dependencies.bson3]
-git = "https://github.com/dvn8weil/bson-rust"
+[dev-dependencies.bson]
+git = "https://github.com/mongodb/bson-rust"
 branch = "3.0.x"
 package = "bson"
 version = "3.0.0"
