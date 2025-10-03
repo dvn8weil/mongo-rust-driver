@@ -146,7 +146,7 @@ default-features = false
 
 [dependencies.bson]
 version = "3.0.0"
-git = "https://github.com/mongodb/bson-rust"
+git = "https://github.com/dvn8weil/bson-rust"
 branch = "3.0.x"
 package = "bson"
 features = ["serde"]
@@ -154,7 +154,7 @@ optional = true
 
 [dependencies.mongocrypt]
 version = "0.3.1"
-git = "https://github.com/mongodb/libmongocrypt-rust.git"
+git = "https://github.com/dvn8weil/libmongocrypt-rust.git"
 branch = "main"
 default-features = false
 optional = true
@@ -224,7 +224,7 @@ serde-hex = "0.1.0"
 serde_path_to_error = "0.1"
 
 [dev-dependencies.bson]
-git = "https://github.com/mongodb/bson-rust"
+git = "https://github.com/dvn8weil/bson-rust"
 branch = "3.0.x"
 package = "bson"
 version = "3.0.0"
